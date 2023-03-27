@@ -1,0 +1,232 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+#leftbody {
+  width: 60%;
+  min-width: 550px;
+}
+#rightbody {
+  width: 33%;
+  display: flex;
+  flex-shrink: 8;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 5px;
+  margin: 5px;
+  gap: 5px;
+}
+#videobody {
+  padding-top: 20px;
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+}
+#commentbody {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: 600px;
+}
+.videoabout {
+  height: 90px;
+  width: 100%;
+  gap: 7px;
+}
+.abouttext {
+  height: 49%;
+  width: 96%;
+  font-size: 23px;
+  font-weight: 550;
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+}
+.abouticons {
+  height: 49%;
+  width: 96%;
+  display: flex;
+}
+.abouticons span {
+  display: flex;
+  align-items: center;
+  background-color: rgb(211, 212, 212);
+  border-radius: 10px;
+  height: 75%;
+  padding: 0px 17px 0px 17px;
+  gap: 10px;
+}
+.abouticons span:hover {
+  cursor: pointer;
+  background-color: rgb(200, 198, 198);
+}
+.videocomment {
+  margin-left: 10px;
+  width: 94%;
+  height: 150px;
+  background-color: rgb(211, 212, 212);
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.actualcomment {
+  margin-left: 30px;
+  margin-right: 20px;
+  width: 92%;
+  height: 400px;
+  margin-top: 20px;
+  border-top: 1px solid silver;
+}
+.actualcomment span {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+.actualcomment span:hover {
+  background-color: rgb(205, 202, 202);
+  cursor: pointer;
+  border-radius: 8px;
+}
+.addacomment {
+  width: 100%;
+  padding-bottom: 4px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid silver;
+}
+.pplcomment {
+  margin-top: 10px;
+  width: 100%;
+  height: 400px;
+  background: rgb(238, 238, 238);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+}
+.actualcommentadd {
+  display: flex;
+  width: 95%;
+  max-height: 120px;
+}
+.addcommentchannel {
+  width: 100%;
+  font-weight: 700;
+}
+.cardoptionmain {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  position: relative;
+}
+.cardoptionmain::-webkit-scrollbar {
+  display: none;
+}
+.optionslider {
+  height: 95%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.cardoptbutton {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0px;
+  top: 7px;
+  border-radius: 50px;
+  height: 30px;
+  width: 30px;
+  background-color: rgba(255, 255, 255, 0.864);
+}
+.cardoptbutton:hover {
+  background-color: rgb(234, 230, 230);
+}
+
+.cardoptions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 10px 0px 10px;
+  white-space: nowrap;
+  height: 80%;
+
+  border-radius: 10px;
+  background-color: rgb(211, 212, 212);
+}
+.card {
+  width: 96%;
+  height: 130px;
+  position: relative;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  box-shadow: 2px 2px 2px rgb(215, 214, 214);
+  border-radius: 10px;
+}
+
+#cardopt {
+  position: absolute;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  top: 3px;
+  right: 3px;
+}
+#watchlater {
+  position: absolute;
+
+  height: 30px;
+  width: 30px;
+  bottom: 40%;
+  left: 23%;
+
+  border-radius: 10px;
+  overflow: hidden;
+}
+.cardimg {
+  width: 30%;
+  height: 85%;
+
+  border-radius: 10px;
+  overflow: hidden;
+}
+.cardimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carddetails {
+  width: 65%;
+  height: 85%;
+
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.carddetaileach {
+  font-size: 17px;
+  font-weight: 600;
+}
+.channelnameeach {
+  color: grey;
+  font-size: 14px;
+}
+@media screen and (max-width: 700px) {
+  #rightbody {
+    display: none;
+  }
+}

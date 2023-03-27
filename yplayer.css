@@ -1,0 +1,270 @@
+#videoplayersection {
+  width: 55vw;
+  height: 380px;
+  display: flex;
+}
+.videomain {
+  width: 100%;
+  min-width: 550px;
+  height: 100%;
+  position: relative;
+}
+.videohead {
+  height: 40px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+video {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  object-fit: cover;
+}
+
+.controls {
+  display: flex;
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: rgba(0, 0, 0, 0.734);
+}
+
+.Lcontrol,
+.Rcontrol {
+  width: 50%;
+  height: 100%;
+  gap: 6px;
+  display: flex;
+  align-items: center;
+}
+.Rcontrol {
+  justify-content: end;
+}
+
+.btn {
+  width: 50px;
+  height: 90%;
+  overflow: hidden;
+}
+.btnsound {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.play {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.pause {
+  display: none;
+}
+.btncollapse {
+  width: 1px;
+  overflow: hidden;
+  transition: 0.4s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+.btncollapse input {
+  accent-color: white;
+  cursor: pointer;
+  box-shadow: -2px 2px -3px rgba(255, 255, 255, 0.488);
+  height: 5px;
+  width: 100%;
+}
+.btnsound:hover span {
+  width: 100px;
+}
+#time {
+  height: 90%;
+
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 2px;
+}
+.settingopt {
+  display: none;
+}
+#settingopt div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 35px;
+  margin-top: 6px;
+}
+#settingopt div:hover {
+  cursor: pointer;
+  background-color: rgb(72, 71, 71);
+}
+.L,
+.R {
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.Ll {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+.settingoptV {
+  flex-direction: column;
+  transition: 0.4s ease;
+  color: white;
+  margin: 7px;
+  position: absolute;
+  background-color: rgb(36, 35, 35);
+  width: 270px;
+  height: 170px;
+  border-radius: 10px;
+  opacity: 0.9;
+  bottom: 45px;
+  right: 40px;
+}
+.videomain .mainprogress {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 35px;
+  width: 100%;
+  left: 0px;
+}
+#mainrange {
+  accent-color: white;
+  cursor: pointer;
+}
+/* here is slider switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #686767;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: -5px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.checkbox:checked + .slider {
+  background-color: red;
+}
+
+.checkbox:checked + .slider:before {
+  transform: translateX(10px);
+}
+
+/* Rounded sliders */
+.slider {
+  border-radius: 34px;
+}
+
+.slider:before {
+  border-radius: 50%;
+}
+#autoplay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* .slider img{
+position:absolute;
+width:20px;
+top: -5px;
+left:4px
+} */
+.checkbox:checked img {
+  transform: translateX(10px);
+}
+/* end of switch */
+.speed {
+  display: none;
+}
+.speedV {
+  position: absolute;
+  color: white;
+  bottom: 10px;
+  height: 250px;
+  width: 200px;
+  background-color: rgba(36, 35, 35, 0.567);
+  opacity: 0.9;
+  bottom: 45px;
+  right: 40px;
+  padding: 3px;
+  transition: 0.1s ease-in-out;
+}
+.quality {
+  display: none;
+}
+.qualityV {
+  position: absolute;
+  height: 250px;
+  width: 200px;
+  background-color: rgba(36, 35, 35, 0.629);
+  opacity: 0.9;
+  bottom: 45px;
+  right: 40px;
+  transition: 0.1s ease-in-out;
+  color: white;
+  padding: 5px;
+}
+#speed {
+  overflow: scroll;
+}
+#speed ::-webkit-scrollbar {
+}
+.speedin {
+  margin: 2px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  gap: 20px;
+}
+.speedin:hover,
+.qualityin:hover {
+  background-color: rgb(72, 71, 71);
+}
+
+.qualityin {
+  margin: 2px;
+  display: flex;
+  font-size: 17px;
+  align-items: center;
+  padding: 12px;
+  gap: 20px;
+}
