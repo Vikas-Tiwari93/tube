@@ -1,6 +1,3 @@
-// let api_key = "AIzaSyDP8nyOk9n2U6hSBPoQDsrh72zvaQHEQZY";
-
-// let api_key = "AIzaSyDP8nyOk9n2U6hSBPoQDsrh72zvaQHEQZY";
 // let video_http = "https://www.googleapis.com/youtube/v3/videos?";
 // fetch(
 //   video_http +
