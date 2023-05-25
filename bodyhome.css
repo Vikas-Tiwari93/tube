@@ -60,7 +60,6 @@ a {
   padding: 2px;
 }
 .containers > div {
-  background-color: rgb(212, 213, 214);
   padding: 7px;
   width: 30px;
   height: 30px;
@@ -69,6 +68,9 @@ a {
   justify-content: center;
   margin-left: 10px;
   border-radius: 50%;
+}
+.containers > div:hover {
+  background-color: rgb(182, 179, 179);
 }
 .containers > div > svg {
   width: 25px;
@@ -105,6 +107,7 @@ a {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  font-size: 14px;
 }
 .hidden-scroll:hover {
   overflow-y: scroll;
@@ -227,8 +230,6 @@ input::placeholder {
   color: white;
 }
 .sideonclick {
-  width: 60px;
-
   display: inline-block;
   display: flex;
   flex-direction: column;
@@ -237,12 +238,12 @@ input::placeholder {
 .sideonclick div {
   width: 60px;
   height: 60px;
-
+  padding: 7px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-size: 13px;
+  font-size: 12px;
   gap: 6px;
 }
 .sideonclick div:hover {
@@ -271,6 +272,7 @@ input::placeholder {
   display: flex;
   justify-content: center;
   background-color: white;
+  font-size: 14px;
 }
 .stickysliderhomeonclick {
   height: 50px;
@@ -281,6 +283,7 @@ input::placeholder {
   display: flex;
   justify-content: center;
   background-color: white;
+  font-size: 14px;
 }
 .stickysliderhomeonclick span::-webkit-scrollbar {
   display: none;
@@ -293,7 +296,7 @@ input::placeholder {
   display: flex;
   height: 100%;
   gap: 5px;
-  font-size: 16px;
+  font-weight: 600;
   align-items: center;
   padding: 0px 20px 0px 20px;
   gap: 20px;
@@ -306,13 +309,18 @@ input::placeholder {
   justify-content: center;
   width: 45px;
   height: 45px;
-  background-color: #f1eeee;
+  background-color: #a8a5a5;
   border-radius: 50%;
   position: absolute;
 }
 .sliderbtnone:hover,
 .sliderbtntwo:hover {
-  background-color: #e1dede;
+  background-color: #c9c7c7;
+  cursor: pointer;
+}
+.sliderbtnone:active,
+.sliderbtntwo:active {
+  background-color: #a3a0a0;
   cursor: pointer;
 }
 
@@ -331,6 +339,17 @@ input::placeholder {
 
   white-space: nowrap;
 }
+.searchoption:hover {
+  cursor: pointer;
+  background-color: rgb(190, 192, 194);
+}
+.searchoption:active {
+  background-color: rgb(155, 156, 157);
+}
+#cardoptions {
+  background-color: rgb(40, 39, 39);
+  color: white;
+}
 .myvideoplay {
   height: 340px;
   width: 100%;
@@ -348,17 +367,19 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   width: 350px;
-  height: 270px;
+  height: 300px;
   box-shadow: 2px 2px 2px rgb(224, 220, 220);
   margin: 5px;
   align-items: center;
   gap: 4px;
-  padding: 0px;
+  padding: 8px;
   border-radius: 10px;
+  border: 1px solid silver;
+  box-sizing: border-box;
 }
 .cardimg {
   height: 67%;
-  width: 95%;
+  width: 100%;
 
   border-radius: 12px;
   overflow: hidden;
@@ -387,12 +408,15 @@ input::placeholder {
 .icondetail {
   width: 80%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .icondetail div {
   width: 100%;
 }
 .detailone {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   height: 39px;
   width: 90%;
@@ -409,11 +433,15 @@ input::placeholder {
 #shortscard {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 180px;
   height: 350px;
   box-shadow: 2px 2px 2px silver;
   margin: 5px;
   border-radius: 10px;
+  padding: 7px;
+  font-size: 15px;
+  border: 1px solid silver;
 }
 .shortimg {
   width: 100%;
@@ -427,6 +455,11 @@ input::placeholder {
   height: 100%;
 }
 .shortdetail {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600;
 }
 
 .youtubevideosroot {
@@ -450,10 +483,12 @@ input::placeholder {
   transition: 0.2s ease-out;
   box-shadow: -2px 2px 6px rgb(190, 186, 186);
   border-radius: 12px;
+  font-size: 15px;
 }
 .forscroll {
   height: 83%;
   overflow: hidden;
+  font-size: 14px;
 }
 .forscroll:hover {
   overflow-y: scroll;
@@ -590,7 +625,8 @@ input::placeholder {
   margin-left: 260px;
   display: flex;
   justify-content: center;
-  background-color: rgba(86, 86, 86, 0.132);
+  background-color: rgb(34, 34, 34);
+  font-size: 14px;
 }
 .stickysliderhomeblack span::-webkit-scrollbar {
   display: none;
@@ -611,6 +647,7 @@ input::placeholder {
   height: 100%;
   overflow: hidden;
   color: white;
+  font-size: 14px;
 }
 .hidden-scrollblack:hover {
   overflow-y: scroll;

@@ -70,3 +70,58 @@ function dark() {
     optionblack[a].classList.toggle("searchoptionblack");
   }
 }
+
+function optionswitch1() {
+  document.getElementById("cardoptions").removeAttribute("id");
+  event.currentTarget.setAttribute("id", "cardoptions");
+}
+function optionswitch2() {
+  document.getElementById("cardoptions").removeAttribute("id");
+  event.currentTarget.setAttribute("id", "cardoptions");
+}
+function optionswitch3() {
+  document.getElementById("cardoptions").removeAttribute("id");
+  event.currentTarget.setAttribute("id", "cardoptions");
+}
+function optionswitch4() {
+  document.getElementById("cardoptions").removeAttribute("id");
+  event.currentTarget.setAttribute("id", "cardoptions");
+}
+function optionswitch5() {
+  document.getElementById("cardoptions").removeAttribute("id");
+  event.currentTarget.setAttribute("id", "cardoptions");
+}
+function optionswitch6() {
+  document.getElementById("cardoptions").removeAttribute("id");
+  event.currentTarget.setAttribute("id", "cardoptions");
+}
+function optionswitch7() {
+  document.getElementById("cardoptions").removeAttribute("id");
+  event.currentTarget.setAttribute("id", "cardoptions");
+}
+function optionswitch8() {
+  document.getElementById("cardoptions").removeAttribute("id");
+  event.currentTarget.setAttribute("id", "cardoptions");
+}
+function optionswitch9() {
+  document.getElementById("cardoptions").removeAttribute("id");
+  event.currentTarget.setAttribute("id", "cardoptions");
+}
+function optionswitch10() {
+  document.getElementById("cardoptions").removeAttribute("id");
+  event.currentTarget.setAttribute("id", "cardoptions");
+}
+function optionswitch11() {
+  document.getElementById("cardoptions").removeAttribute("id");
+  event.currentTarget.setAttribute("id", "cardoptions");
+}
+
+function slideR() {
+  let main = document.getElementById("cardoptionmain");
+  main.scrollBy(200, 0);
+}
+function slideL() {
+  let main = document.getElementById("cardoptionmain");
+
+  main.scrollBy(-200, 0);
+}

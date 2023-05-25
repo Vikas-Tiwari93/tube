@@ -41,7 +41,7 @@
               style="margin-left: 6px"
               id="nofillone"
             />
-            YouTube
+            YuTube
           </a>
         </div>
         <section class="hidden-scroll" id="hidden-scroll">
@@ -304,7 +304,7 @@
             style="margin-left: 6px"
             id="nofilltwo"
           />
-          YouTube
+          YuTube
         </a>
       </div>
       <div class="search">
@@ -397,7 +397,13 @@
       <div id="profile" class="profileoff">
         <div id="blackclose" class="blackcloseoff">
           <div
-            style="height: 15%; border-bottom: 2px solid silver; display: flex"
+            style="
+              height: 16%;
+              border-bottom: 2px solid silver;
+              display: flex;
+              font-weight: 600;
+              font-size: 15px;
+            "
           >
             <span id="profilepic" class="profilepic">
               <img
@@ -458,7 +464,7 @@
                       class="style-scope yt-icon"
                     ></path>
                   </g></svg
-                >YouTube Studio
+                >YuTube Studio
               </li>
               <li>
                 <svg
@@ -540,7 +546,7 @@
                       class="style-scope yt-icon"
                     ></path>
                   </g></svg
-                >Your data in Youtube
+                >Your data in Yutube
               </li>
             </ul>
             <ul>
@@ -825,22 +831,46 @@
         </div>
       </div>
       <div class="stickysliderhome" id="stickysliderhome">
-        <span style="height: 100%; width: 90%; overflow-x: scroll">
+        <span
+          style="
+            height: 100%;
+            width: 90%;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+          "
+          id="cardoptionmain"
+        >
           <div class="slider">
-            <div class="searchoption">All</div>
-            <div class="searchoption">Mixes</div>
-            <div class="searchoption">Aircraft Attacks</div>
-            <div class="searchoption">Body building</div>
-            <div class="searchoption">EA Sports UFC</div>
-            <div class="searchoption">John Jones</div>
-            <div class="searchoption">Scenes</div>
-            <div class="searchoption">Javascript</div>
-            <div class="searchoption">Computer Programming</div>
-            <div class="searchoption">John wick</div>
-            <div class="searchoption">CSS battles</div>
+            <div
+              class="searchoption"
+              onclick="optionswitch1()"
+              id="cardoptions"
+            >
+              All
+            </div>
+            <div class="searchoption" onclick="optionswitch2()">Mixes</div>
+            <div class="searchoption" onclick="optionswitch3()">
+              Aircraft Attacks
+            </div>
+            <div class="searchoption" onclick="optionswitch4()">
+              Body building
+            </div>
+            <div class="searchoption" onclick="optionswitch5()">
+              EA Sports UFC
+            </div>
+            <div class="searchoption" onclick="optionswitch6()">John Jones</div>
+            <div class="searchoption" onclick="optionswitch7()">Scenes</div>
+            <div class="searchoption" onclick="optionswitch8()">Javascript</div>
+            <div class="searchoption" onclick="optionswitch9()">
+              Computer Programming
+            </div>
+            <div class="searchoption" onclick="optionswitch10()">John wick</div>
+            <div class="searchoption" onclick="optionswitch11()">
+              CSS battles
+            </div>
           </div>
         </span>
-        <div class="sliderbtnone">
+        <div class="sliderbtnone" id="cardoptbuttonL" onclick="slideL()">
           <svg
             xmlns:xlink="http://www.w3.org/1999/xlink"
             xmlns="http://www.w3.org/2000/svg"
@@ -860,7 +890,7 @@
             </g>
           </svg>
         </div>
-        <div class="sliderbtntwo">
+        <div class="sliderbtntwo" id="cardoptbuttonR" onclick="slideR()">
           <svg
             xmlns:xlink="http://www.w3.org/1999/xlink"
             xmlns="http://www.w3.org/2000/svg"
@@ -906,7 +936,7 @@
           </div>
         </div>
         <div class="youtubevideosroot">
-          <span>Youtube</span>
+          <span>Yutube</span>
           <div
             id="cardrootsecond"
             style="display: flex; width: 100%; height: 100%"

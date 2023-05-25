@@ -14,13 +14,13 @@
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  padding: 5px;
+  padding: 15px 5px 10px 5px;
   margin: 5px;
   gap: 5px;
+  position: relative;
 }
 #videobody {
-  padding-top: 20px;
-  height: 470px;
+  height: 570px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -128,7 +128,7 @@
   display: flex;
   align-items: center;
   overflow-x: scroll;
-  position: relative;
+  scroll-behavior: smooth;
 }
 .cardoptionmain::-webkit-scrollbar {
   display: none;
@@ -139,66 +139,124 @@
   align-items: center;
   gap: 20px;
 }
-.cardoptbutton {
+.cardoptbuttonR {
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   right: 0px;
-  top: 7px;
+  top: 23px;
   border-radius: 50px;
   height: 30px;
   width: 30px;
   background-color: rgba(255, 255, 255, 0.864);
 }
-.cardoptbutton:hover {
+.cardoptbuttonR:hover {
   background-color: rgb(234, 230, 230);
+}
+.cardoptbuttonR:active {
+  background-color: rgb(147, 143, 143);
+}
+.cardoptbuttonL {
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0px;
+  top: 23px;
+  border-radius: 50px;
+  height: 30px;
+  width: 30px;
+  background-color: rgba(255, 255, 255, 0.864);
+}
+.cardoptbuttonL:hover {
+  background-color: rgb(234, 230, 230);
+}
+.cardoptbuttonL:active {
+  background-color: rgb(147, 143, 143);
 }
 
 .cardoptions {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 15px 0px 15px;
   white-space: nowrap;
   height: 80%;
-
+  font-size: 14.5px;
   border-radius: 10px;
   background-color: rgb(211, 212, 212);
 }
+#cardoptions {
+  background-color: rgb(40, 39, 39);
+  color: white;
+}
+.cardoptions:hover {
+  cursor: pointer;
+  background-color: rgb(191, 192, 192);
+}
+.cardoptions:active {
+  background-color: rgba(255, 255, 255, 0.491);
+}
 .card {
-  width: 96%;
-  height: 130px;
+  width: 94%;
+  height: 110px;
   position: relative;
   display: flex;
-  gap: 5px;
+  gap: 9px;
   align-items: center;
   box-shadow: 2px 2px 2px rgb(215, 214, 214);
   border-radius: 10px;
+  border: 1px solid silver;
+  box-sizing: border-box;
+  padding: 5px;
 }
-
-#cardopt {
+.card:hover * {
+  cursor: pointer;
+  visibility: visible;
+}
+.cardopt {
+  visibility: hidden;
   position: absolute;
   border-radius: 50%;
   height: 30px;
   width: 30px;
   top: 3px;
   right: 3px;
-}
-#watchlater {
-  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  backdrop-filter: blur(20px);
+  border: 1px solid transparent;
+}
+.cardopt:hover {
+  background-color: rgba(171, 166, 166, 0.719);
+}
+.watchlater {
+  visibility: hidden;
+  position: absolute;
+  filter: invert(1);
+  background-color: rgba(249, 247, 247, 0.805);
   height: 30px;
   width: 30px;
   bottom: 40%;
-  left: 23%;
-
+  left: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
   border-radius: 10px;
   overflow: hidden;
 }
+.watchlater:hover {
+  border: 1px solid rgb(46, 45, 45);
+}
+
 .cardimg {
-  width: 30%;
-  height: 85%;
+  width: 40%;
+  height: 99%;
 
   border-radius: 10px;
   overflow: hidden;
@@ -209,21 +267,33 @@
   object-fit: cover;
 }
 .carddetails {
-  width: 65%;
-  height: 85%;
-
+  width: 55%;
+  height: 95%;
+  gap: 8px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  justify-content: space-between;
 }
 .carddetaileach {
-  font-size: 17px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 620;
+  height: 38px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .channelnameeach {
-  color: grey;
-  font-size: 14px;
+  color: rgb(87, 85, 85);
+  font-size: 12.5px;
+}
+.channelnew {
+  background-color: rgb(212, 206, 206);
+  padding: 0px 6px 0px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+  color: rgb(43, 43, 43);
 }
 @media screen and (max-width: 700px) {
   #rightbody {

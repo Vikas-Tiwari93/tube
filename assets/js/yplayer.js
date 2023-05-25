@@ -12,7 +12,16 @@ function set() {
   let settings = document.getElementById("settingopt");
   settings.classList.toggle("settingoptV");
   settings.classList.toggle("settingopt");
-  console.log("vikas");
+  let speed = document.getElementById("speed");
+  if (speed.className === "speedV") {
+    speed.classList.toggle("speedV");
+    speed.classList.toggle("speed");
+  }
+  let quality = document.getElementById("quality");
+  if (quality.className === "qualityV") {
+    quality.classList.toggle("qualityV");
+    quality.classList.toggle("quality");
+  }
 }
 function playy() {
   let video = document.getElementById("vid");
@@ -35,11 +44,11 @@ function reload() {
 function mutee() {
   let video = document.getElementById("vid");
   video.volume = 0;
-  video.muted = false;
 }
 function unmutee() {
   let video = document.getElementById("vid");
   video.volume = 0.5;
+  video.muted = false;
 }
 function soundval() {
   let soundval = document.getElementById("progressin").value;
@@ -53,7 +62,7 @@ video.autoplay = true;
 setTimeout(function duration() {
   let video = document.getElementById("vid");
   let durations = document.getElementById("duration");
-  durations.innerHTML =
+  durations.innerText =
     Math.floor(video.duration / 60) +
     ":" +
     Math.round((video.duration % 60) * 10);
@@ -62,11 +71,13 @@ setTimeout(function duration() {
 setInterval(function current() {
   let video = document.getElementById("vid");
   let currenttime = document.getElementById("currenttime");
-  currenttime.innerHTML =
-    Math.floor(video.currentTime / 60) +
-    ":" +
-    Math.round(video.currentTime % 60) +
-    "/";
+  let currenttimemin = Math.floor(video.currentTime / 60);
+  let currenttimesec = Math.round(video.currentTime % 60);
+  if (currenttimesec < 10) {
+    currenttimesec = "0" + currenttimesec;
+    currenttime.innerHTML = currenttimemin + ":" + currenttimesec + " / ";
+  }
+  currenttime.innerHTML = currenttimemin + ":" + currenttimesec + " / ";
 }, 1000);
 setInterval(function mainrange() {
   let mainrange = document.getElementById("mainrange");
@@ -95,23 +106,183 @@ function quality() {
   settings.classList.toggle("settingopt");
   settings.classList.toggle("settingoptV");
 }
-function qualityin() {
+function qualityin1080() {
   let quality = document.getElementById("quality");
   quality.classList.toggle("quality");
   quality.classList.toggle("qualityV");
+  document.getElementById("displayquality").innerHTML = "1080p";
+  document.getElementById("qualitychk").removeAttribute("id");
+  event.currentTarget.querySelector("img").setAttribute("id", "qualitychk");
+  console.log(event.target.querySelector("img"));
+  console.log(event.currentTarget.querySelector("img"));
 }
+function qualityin720() {
+  let quality = document.getElementById("quality");
+  quality.classList.toggle("quality");
+  quality.classList.toggle("qualityV");
+  document.getElementById("displayquality").innerHTML = "720p";
+  document.getElementById("qualitychk").removeAttribute("id");
+  event.target.querySelector("img").setAttribute("id", "qualitychk");
+  console.log(event.target.querySelector("img"));
+  console.log(event.currentTarget.querySelector("img"));
+}
+function qualityin480() {
+  let quality = document.getElementById("quality");
+  quality.classList.toggle("quality");
+  quality.classList.toggle("qualityV");
+  document.getElementById("displayquality").innerHTML = "480p";
+  document.getElementById("qualitychk").removeAttribute("id");
+  event.target.querySelector("img").setAttribute("id", "qualitychk");
+  console.log(event.target.querySelector("img"));
+  console.log(event.currentTarget.querySelector("img"));
+}
+function qualityin240() {
+  let quality = document.getElementById("quality");
+  quality.classList.toggle("quality");
+  quality.classList.toggle("qualityV");
+  document.getElementById("displayquality").innerHTML = "240p";
+  document.getElementById("qualitychk").removeAttribute("id");
+  event.target.querySelector("img").setAttribute("id", "qualitychk");
+  console.log(event.target.querySelector("img"));
+  console.log(event.currentTarget.querySelector("img"));
+}
+function qualityin144() {
+  let quality = document.getElementById("quality");
+  quality.classList.toggle("quality");
+  quality.classList.toggle("qualityV");
+  document.getElementById("displayquality").innerHTML = "144p";
+  document.getElementById("qualitychk").removeAttribute("id");
+  event.target.querySelector("img").setAttribute("id", "qualitychk");
+  console.log(event.target.querySelector("img"));
+  console.log(event.currentTarget.querySelector("img"));
+}
+function qualityinauto() {
+  let quality = document.getElementById("quality");
+  quality.classList.toggle("quality");
+  quality.classList.toggle("qualityV");
+  document.getElementById("displayquality").innerHTML = "Auto";
+  document.getElementById("qualitychk").removeAttribute("id");
+  event.target.querySelector("img").setAttribute("id", "qualitychk");
+  console.log(event.target.querySelector("img"));
+  console.log(event.currentTarget.querySelector("img"));
+}
+
 function speedin() {
   let speedlist = document.getElementById("speed");
   speedlist.classList.toggle("speed");
   speedlist.classList.toggle("speedV");
 }
-
-function loop() {
-  let video = document.getElementsByTagName("video");
-  let loop = document.getElementById("loop");
-  if (video.loop == "true") {
-    video[0].removeAttribute("loop");
-    loop.style.backgroundColor = "white";
+function speedin025() {
+  let speedlist = document.getElementById("speed");
+  speedlist.classList.toggle("speed");
+  speedlist.classList.toggle("speedV");
+  document.querySelector("video").playbackRate = 0.25;
+  document.getElementById("displayspeed").innerHTML = "0.25 X";
+  document.getElementById("speedchk").removeAttribute("id");
+  event.target.querySelector("img").setAttribute("id", "speedchk");
+}
+function speedin050() {
+  let speedlist = document.getElementById("speed");
+  speedlist.classList.toggle("speed");
+  speedlist.classList.toggle("speedV");
+  document.querySelector("video").playbackRate = 0.5;
+  document.getElementById("displayspeed").innerHTML = "0.5 X";
+  document.getElementById("speedchk").removeAttribute("id");
+  event.target.querySelector("img").setAttribute("id", "speedchk");
+}
+function speedin075() {
+  let speedlist = document.getElementById("speed");
+  speedlist.classList.toggle("speed");
+  speedlist.classList.toggle("speedV");
+  document.querySelector("video").playbackRate = 0.75;
+  document.getElementById("displayspeed").innerHTML = "0.75 X";
+  document.getElementById("speedchk").removeAttribute("id");
+  event.target.querySelector("img").setAttribute("id", "speedchk");
+}
+function speedin100() {
+  let speedlist = document.getElementById("speed");
+  speedlist.classList.toggle("speed");
+  speedlist.classList.toggle("speedV");
+  document.querySelector("video").playbackRate = 1;
+  document.getElementById("displayspeed").innerHTML = "Normal";
+  document.getElementById("speedchk").removeAttribute("id");
+  event.target.querySelector("img").setAttribute("id", "speedchk");
+}
+function speedin125() {
+  let speedlist = document.getElementById("speed");
+  speedlist.classList.toggle("speed");
+  speedlist.classList.toggle("speedV");
+  document.querySelector("video").playbackRate = 1.25;
+  document.getElementById("displayspeed").innerHTML = "1.25 X";
+  document.getElementById("speedchk").removeAttribute("id");
+  event.target.querySelector("img").setAttribute("id", "speedchk");
+}
+function speedin150() {
+  let speedlist = document.getElementById("speed");
+  speedlist.classList.toggle("speed");
+  speedlist.classList.toggle("speedV");
+  document.querySelector("video").playbackRate = 1.5;
+  document.getElementById("displayspeed").innerHTML = "1.5 X";
+  document.getElementById("speedchk").removeAttribute("id");
+  event.target.querySelector("img").setAttribute("id", "speedchk");
+}
+function speedin175() {
+  let speedlist = document.getElementById("speed");
+  speedlist.classList.toggle("speed");
+  speedlist.classList.toggle("speedV");
+  document.querySelector("video").playbackRate = 1.75;
+  document.getElementById("displayspeed").innerHTML = "1.75 X";
+  document.getElementById("speedchk").removeAttribute("id");
+  event.target.querySelector("img").setAttribute("id", "speedchk");
+}
+function speedin200() {
+  let speedlist = document.getElementById("speed");
+  speedlist.classList.toggle("speed");
+  speedlist.classList.toggle("speedV");
+  document.querySelector("video").playbackRate = 2;
+  document.getElementById("displayspeed").innerHTML = "2 X";
+  document.getElementById("speedchk").removeAttribute("id");
+  event.target.querySelector("img").setAttribute("id", "speedchk");
+}
+function classreset() {
+  let speedlist = document.getElementById("speed");
+  let quality = document.getElementById("quality");
+  let settings = document.getElementById("settingopt");
+  let video = document.getElementById("vid");
+  let btn = document.getElementById("play");
+  if (
+    speedlist.className === "speed" &&
+    quality.className === "quality" &&
+    settings.className === "settingopt"
+  ) {
+    if (btn.className === "pause") {
+      video.pause();
+      document.getElementById("play").classList.toggle("pause");
+      document.getElementById("play").classList.toggle("play");
+    } else {
+      video.play();
+      document.getElementById("play").classList.toggle("play");
+      document.getElementById("play").classList.toggle("pause");
+    }
+  } else {
+    speedlist.className = "speed";
+    quality.className = "quality";
+    settings.className = "settingopt";
   }
-  video[0].setAttribute("loop", "true");
+}
+function hometheatre() {
+  document.getElementById("videobody").style.width = "93vw";
+  document.getElementById("rightbody").removeAttribute("margin");
+  document.getElementById("rightbody").style.marginTop = "640px";
+  document.getElementById("videobody").style.height = "105vh";
+  document.getElementById("videoplayersection").style.height = "82%";
+}
+function homemini() {
+  document.getElementById("videobody").style.width = "auto";
+  document.getElementById("rightbody").style.margin = "5px";
+  document.getElementById("videobody").style.height = "570px";
+  document.getElementById("videoplayersection").style.height = "73%";
+}
+function fullscreen() {
+  document.querySelector("video").webkitRequestFullScreen();
 }

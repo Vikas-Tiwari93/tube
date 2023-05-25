@@ -12,7 +12,7 @@
     <section onclick="" id="videoplayersection">
       <div class="videomain">
         <div class="videohead"></div>
-        <video
+        <video onclick="classreset()"
           id="vid"
           src="./assets/video/THe Art of Living - Surya Namaskar-Part 1 for beginners - YouTube.mp4"
         ></video>
@@ -43,16 +43,16 @@
             ><span class="btnsound">
               <a class="btn" onclick="sound()"
                 ><img
-                  src="./svg/videoplayer/sound (1).svg"
-                  alt=""
-                  class="play"
-                  id="volumeon"
-                  onclick="mutee()" /><img
                   src="./svg/videoplayer/mutesvg.svg"
                   alt=""
                   class="play"
+                  id="volumeon"
+                  onclick="unmutee()" /><img
+                  src="./svg/videoplayer/sound (1).svg"
+                  alt=""
+                  class="play"
                   id="volumeoff"
-                  onclick="unmutee()"
+                  onclick="mutee()"
               /></a>
               <span id="volprogress" class="btncollapse"
                 ><input
@@ -91,7 +91,7 @@
                 width="100%"
               />
             </div>
-            <div id="miniplayer" class="btn">
+            <div id="miniplayer" class="btn" onclick="homemini()">
               <img
                 src="./svg/videoplayer/miniscreen.svg"
                 alt=""
@@ -99,7 +99,7 @@
                 width="100%"
               />
             </div>
-            <div id="theatre" class="btn">
+            <div id="theatre" class="btn" onclick="hometheatre()">
               <img
                 src="./svg/videoplayer/hometheater.svg"
                 alt=""
@@ -107,7 +107,7 @@
                 width="100%"
               />
             </div>
-            <div id="fullscrn" class="btn">
+            <div id="fullscrn" class="btn" onclick="fullscreen()">
               <img
                 src="./svg/videoplayer/fullscreen.svg"
                 alt=""
@@ -123,29 +123,29 @@
             >
             <span class="slider"></span>
           </label></span></div>
-          <div onclick="speed()"><span class="L"><img src="./svg/videoplayer/PLAYBACKSPEED.svg" alt="" class="setbtn">Playback Speed</span> <span class="R">Normal<img src="./svg/videoplayer/settingside.svg" alt=""></span></div>
+          <div onclick="speed()"><span class="L"><img src="./svg/videoplayer/PLAYBACKSPEED.svg" alt="" class="setbtn">Playback Speed</span> <span class="R"><span id="displayspeed">Normal</span> <img src="./svg/videoplayer/settingside.svg" alt=""></span></div>
           <div><span class="Ll"><img src="./svg/videoplayer/cc.svg" alt="" class="setbtn">SubTitles</span> <span class="R">Off<img src="./svg/videoplayer/settingside.svg" alt=""></span></div>
-          <div onclick="quality()"><span class="L"><img src="./svg/videoplayer/QUALITY.svg" alt="" class="setbtn">Quality</span> <span class="R">1080p<img src="./svg/videoplayer/settingside.svg" alt=""></span></div>
+          <div onclick="quality()"><span class="L"><img src="./svg/videoplayer/QUALITY.svg" alt="" class="setbtn">Quality</span> <span class="R"> <span id="displayquality">1080p</span> <img src="./svg/videoplayer/settingside.svg" alt=""></span></div>
         </div>
         <div id="speed" class="speed">
-        <div class="speedin" onclick="speedin()" style="border-bottom:1px solid white;"><img src="./svg/videoplayer/goback.svg" alt=""> Playback Speed</div>
-        <div class="speedin" onclick="speedin()" ><img src="" alt="" style="width:24px;height:24px"> 0.25 X</div>
-        <div class="speedin" onclick="speedin()"><img src="" alt="" style="width:24px;height:24px"> 0.50 X</div>
-        <div class="speedin" onclick="speedin()"><img src="" alt="" style="width:24px;height:24px"> 0.75 X</div>
-        <div class="speedin" onclick="speedin()"><img src="" alt="" style="width:24px;height:24px"> 1 X</div>
-        <div class="speedin" onclick="speedin()"><img src="" alt="" style="width:24px;height:24px"> 1.25 X</div>
-        <div class="speedin" onclick="speedin()"><img src="" alt="" style="width:24px;height:24px"> 1.5 X</div>
-        <div class="speedin" onclick="speedin()"><img src="" alt="" style="width:24px;height:24px"> 1.75 X</div>
-        <div class="speedin" onclick="speedin()"><img src="" alt="" style="width:24px;height:24px"> 2 X</div>
+        <div class="speedin" onclick="speed()" style="border-bottom:1px solid white;"><img src="./svg/videoplayer/goback.svg" alt=""> Playback Speed</div>
+        <div class="speedin" onclick="speedin025()" ><img src="" alt="" style="width:24px;height:24px"> 0.25 X</div>
+        <div class="speedin" onclick="speedin050()"><img src="" alt="" style="width:24px;height:24px"> 0.50 X</div>
+        <div class="speedin" onclick="speedin075()"><img src="" alt="" style="width:24px;height:24px"> 0.75 X</div>
+        <div class="speedin" onclick="speedin100()"><img src="" alt="" style="width:24px;height:24px"> 1 X</div>
+        <div class="speedin" onclick="speedin125()"><img src="" alt="" style="width:24px;height:24px"> 1.25 X</div>
+        <div class="speedin" onclick="speedin150()"><img src="" alt="" style="width:24px;height:24px"> 1.5 X</div>
+        <div class="speedin" onclick="speedin175()"><img src="" alt="" style="width:24px;height:24px"> 1.75 X</div>
+        <div class="speedin" onclick="speedin200()"><img src="" alt="" style="width:24px;height:24px"> 2 X</div>
     
     </div>
         <div id="quality" class="quality">
-        <div class="qualityin" onclick="qualityin()" style="border-bottom:1px solid white;"> <img src="" alt="" style="width:24px;height:24px">1080p</div>
-        <div class="qualityin"onclick="qualityin()"><img src="" alt="" style="width:24px;height:24px">720p</div>
-        <div class="qualityin"onclick="qualityin()"><img src="" alt="" style="width:24px;height:24px">480p</div>
-        <div class="qualityin" onclick="qualityin()"><img src="" alt="" style="width:24px;height:24px">240p</div>
-        <div class="qualityin" onclick="qualityin()"><img src="" alt="" style="width:24px;height:24px">144p</div>
-        <div class="qualityin" onclick="qualityin()"><img src="" alt="" style="width:24px;height:24px">Auto</div></div>
+        <div class="qualityin" onclick="qualityin1080()" style="border-bottom:1px solid white;"> <img src="" alt="" style="width:24px;height:24px">1080p</div>
+        <div class="qualityin"onclick="qualityin720()"><img src="" alt="" style="width:24px;height:24px">720p</div>
+        <div class="qualityin"onclick="qualityin480()"><img src="" alt="" style="width:24px;height:24px">480p</div>
+        <div class="qualityin" onclick="qualityin240()"><img src="" alt="" style="width:24px;height:24px">240p</div>
+        <div class="qualityin" onclick="qualityin144()"><img src="" alt="" style="width:24px;height:24px">144p</div>
+        <div class="qualityin" onclick="qualityinauto()"><img src="" alt="" style="width:24px;height:24px">Auto</div></div>
         <div class="mainprogress">
           <input type="range" id="mainrange"
             style="width: 99%; height: 5px"
@@ -161,3 +161,5 @@
 <script src="./assets/js/yplayer.js">
   
 </script>
+<img src="./assets/svgs/video-comment/videocardoptions.svg" alt="">
+<img src="./assets/svgs/video-comment/watchlater (1).svg" alt="">
