@@ -265,7 +265,7 @@ input::placeholder {
 }
 .stickysliderhome {
   height: 50px;
-  width: 80%;
+
   position: sticky;
   top: 50px;
   margin-left: 260px;
@@ -434,7 +434,7 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 180px;
+  width: 17%;
   height: 350px;
   box-shadow: 2px 2px 2px silver;
   margin: 5px;
@@ -619,7 +619,6 @@ input::placeholder {
 }
 .stickysliderhomeblack {
   height: 50px;
-  width: 80%;
   position: sticky;
   top: 50px;
   margin-left: 260px;
