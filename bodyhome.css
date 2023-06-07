@@ -366,7 +366,8 @@ input::placeholder {
 #homecard {
   display: flex;
   flex-direction: column;
-  width: 350px;
+  width: 31%;
+  min-width: 200px;
   height: 300px;
   box-shadow: 2px 2px 2px rgb(224, 220, 220);
   margin: 5px;
@@ -434,7 +435,7 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 17%;
+  width: 16%;
   height: 350px;
   box-shadow: 2px 2px 2px silver;
   margin: 5px;
